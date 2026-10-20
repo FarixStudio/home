@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Farix builds custom automation for Revit and Windows — software shaped around your workflow, not the other way around." />
+  <meta name="theme-color" content="#f5f8fb" id="theme-color" />
+  <title>Farix — Custom automation for AEC</title>
+  <link rel="icon" type="image/png" href="assets/farix-logo-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Farix — Custom automation for AEC" />
+  <meta property="og:description" content="You describe the workflow. We automate it. Custom Revit add-ins and Windows tools built around your process." />
+  <meta property="og:image" content="assets/farix-logo-192.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('farix-theme');
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="assets/farix-logo-48.png" alt="" width="32" height="32" />
+        <span>Farix</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#what">What we build</a>
+        <a href="#work">Examples</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode" title="Switch theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-primary">Start a conversation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero: main message -->
+  <section id="top" class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">Custom software for AEC teams</p>
+      <h1>You describe the workflow.<br /><span class="accent">We automate it.</span></h1>
+      <p class="lead">
+        Farix builds <strong>personalized tools</strong> around how your team actually works —
+        Revit add-ins, Windows apps, scripts, or something in between.
+        You bring the requirement. We design and ship the automation.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Talk about your process</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-meta">
+        <span>Revit automation</span>
+        <span class="dot"></span>
+        <span>Windows tools</span>
+        <span class="dot"></span>
+        <span>Built to your brief</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / pitch -->
+  <section class="section section-alt">
+    <div class="container pitch-grid">
+      <div>
+        <p class="eyebrow">The problem</p>
+        <h2>Off-the-shelf tools rarely match your process.</h2>
+        <p class="section-sub">
+          Every office has its own standards, parameter schemes, naming rules, and delivery habits.
+          Generic plugins force you to adapt. We flip that: the software adapts to you.
+        </p>
+      </div>
+      <div class="pitch-points">
+        <div class="pitch-item">
+          <strong>Repetitive model work</strong>
+          <span>Hangers, parameters, exports, checks you run every project.</span>
+        </div>
+        <div class="pitch-item">
+          <strong>Rules only your team knows</strong>
+          <span>Bend limits, room data sheets, coordination gates unique to you.</span>
+        </div>
+        <div class="pitch-item">
+          <strong>No in-house developer</strong>
+          <span>You need a working tool, not a research project.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Process</p>
+        <h2>Talk first. Build second.</h2>
+        <p class="section-sub">No product catalog to force-fit. We start from your requirement.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>You explain the pain</h4>
+          <p>What takes too long, what breaks, what must match company standards. Screenshots, sample models, or a short call are enough.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>We scope the automation</h4>
+          <p>Revit API add-in, standalone Windows app, batch tool, or a mix. Clear outcomes, not vague “AI magic.”</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>We build &amp; iterate</h4>
+          <p>Working software against your real files. You try it; we refine until it fits the daily workflow.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>You own the result</h4>
+          <p>Installer, training notes, and a tool your team can run without us in the room.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we build -->
+  <section id="what" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Delivery formats</p>
+        <h2>Whatever form the job needs.</h2>
+      </div>
+      <div class="format-grid">
+        <article class="format-card">
+          <h3>Revit add-ins</h3>
+          <p>Ribbon commands, modeless tools, batch operations on the active model — hangers, parameters, QA checks, exports.</p>
+        </article>
+        <article class="format-card">
+          <h3>Windows applications</h3>
+          <p>Desktop apps outside Revit: report generators, file processors, dashboards, or bridges between BIM and office systems.</p>
+        </article>
+        <article class="format-card">
+          <h3>Targeted scripts &amp; utilities</h3>
+          <p>When a full product is overkill — focused automation that solves one expensive step cleanly.</p>
+        </article>
+      </div>
+      <p class="ai-note">
+        <strong>How we build:</strong> modern development practices and AI-assisted engineering —
+        so custom work can move faster than traditional bespoke software, without cutting corners on reliability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio / proof -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Proof of work</p>
+        <h2>Examples of automation we’ve shipped.</h2>
+        <p class="section-sub">
+          These are production Revit tools under the Farix brand — evidence we can take a real workflow and make software that runs on it.
+          Your project may look nothing like these; that’s the point.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-icon">
+            <img src="assets/planger-icon.png" alt="" width="40" height="40" />
+          </div>
+          <div class="product-tags">
+            <span class="tag">Revit add-in</span>
+            <span class="tag tag-muted">MEP supports</span>
+          </div>
+          <h3>Planger</h3>
+          <p class="product-tagline">Places hangers on pipes with spacing rules, sizing, and rod length to structure above — modeless so the engineer keeps working.</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon">
+            <img src="assets/czer-icon.png" alt="" width="40" height="40" />
+          </div>
+          <div class="product-tags">
+            <span class="tag">Revit add-in</span>
+            <span class="tag tag-muted">Electrical QA</span>
+          </div>
+          <h3>Czer</h3>
+          <p class="product-tagline">Analyzes conduit runs and bend angles, flags runs over 360°, and helps isolate issues instead of manual tracing.</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon">
+            <img src="assets/paramsync-icon.png" alt="" width="40" height="40" />
+          </div>
+          <div class="product-tags">
+            <span class="tag">Revit add-in</span>
+            <span class="tag tag-muted">Data</span>
+          </div>
+          <h3>ParamSync</h3>
+          <p class="product-tagline">Copies parameter values across selection or category — built for workshared models and large element sets.</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-icon">
+            <img src="assets/Rodex_Icon_128.png" alt="" width="40" height="40" />
+          </div>
+          <div class="product-tags">
+            <span class="tag">Revit add-in</span>
+            <span class="tag tag-muted">Room data</span>
+          </div>
+          <h3>Rodex</h3>
+          <p class="product-tagline">Pulls room parameters and items from host + linked models into structured Excel for documentation handoff.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container cta-box">
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow" style="margin-bottom:0.75rem">Next step</p>
+          <h2>Tell us what still takes too long.</h2>
+          <p class="lead">
+            A short description is enough to start: your Revit version, what the output should be,
+            and who will run the tool. We reply with whether it&rsquo;s a good fit and a rough shape of the solution.
+          </p>
+          <div class="contact-methods">
+            <div class="contact-item">
+              <small>Email</small>
+              <div class="email-row">
+                <strong id="email-text">studiofarix@gmail.com</strong>
+                <button type="button" class="copy-btn" id="copy-email">Copy</button>
+              </div>
+            </div>
+            <!-- TODO: replace the YOUR_* placeholders. Links still containing YOUR_ are hidden automatically. -->
+            <a class="contact-item" href="https://cal.com/YOUR_USERNAME" target="_blank" rel="noopener"><small>Book a call</small><span>Pick a 20-minute slot</span></a>
+            <a class="contact-item" href="https://wa.me/YOUR_NUMBER_WITH_COUNTRY_CODE" target="_blank" rel="noopener"><small>WhatsApp</small><span>Message us directly</span></a>
+            <a class="contact-item" href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener"><small>LinkedIn</small><span>Connect with us</span></a>
+            <a class="contact-item" href="https://github.com/LuffyXDA/Farix" target="_blank" rel="noopener"><small>GitHub</small><span>LuffyXDA/Farix</span></a>
+          </div>
+        </div>
+
+        <!-- TODO: create a free form at formspree.io (or web3forms.com) and paste your form ID below.
+             Until then, submitting opens the visitor's email app with the message filled in. -->
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+            <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+          </div>
+          <label>Revit version<input type="text" name="revit_version" placeholder="e.g. Revit 2025" /></label>
+          <label>What do you want to automate?<textarea name="message" required placeholder="What takes too long, and what should the result look like?"></textarea></label>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/farix-logo-48.png" alt="" width="24" height="24" />
+        <span>Farix</span>
+      </div>
+      <p>© <span id="year"></span> Farix. Custom automation for AEC workflows.</p>
+      <p class="footer-note">Autodesk and Revit are trademarks of Autodesk, Inc. Farix is not affiliated with Autodesk.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Light / dark toggle (choice is remembered)
+    (function () {
+      var root = document.documentElement;
+      var meta = document.getElementById('theme-color');
+      function sync() { meta.setAttribute('content', root.getAttribute('data-theme') === 'dark' ? '#07090c' : '#f5f8fb'); }
+      sync();
+      document.getElementById('theme-toggle').addEventListener('click', function () {
+        var dark = root.getAttribute('data-theme') !== 'dark';
+        if (dark) root.setAttribute('data-theme', 'dark'); else root.removeAttribute('data-theme');
+        try { localStorage.setItem('farix-theme', dark ? 'dark' : 'light'); } catch (e) {}
+        sync();
+      });
+    })();
+
+    // Hide contact links that still hold placeholders
+    document.querySelectorAll('a.contact-item').forEach(function (a) {
+      if (a.getAttribute('href').indexOf('YOUR_') !== -1) a.style.display = 'none';
+    });
+
+    // Copy email
+    var copyBtn = document.getElementById('copy-email');
+    copyBtn.addEventListener('click', function () {
+      var email = document.getElementById('email-text').textContent;
+      var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(email).then(done, done); else done();
+    });
+
+    // Contact form: send via Formspree if configured, otherwise fall back to the email app
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+        var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nRevit version: ' + d.get('revit_version') + '\n\n' + d.get('message');
+        window.location.href = 'mailto:studiofarix@gmail.com?subject=' + encodeURIComponent('Automation inquiry — Farix') + '&body=' + encodeURIComponent(body);
+        return;
+      }
+      status.textContent = 'Sending…';
+      fetch(form.action, { method: 'POST', body: d, headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (r.ok) { form.reset(); status.textContent = 'Thanks! We\u2019ll reply soon.'; }
+          else status.textContent = 'Something went wrong. Please email us directly.';
+        })
+        .catch(function () { status.textContent = 'Network error. Please email us directly.'; });
+    });
+  </script>
+</body>
+</html>
