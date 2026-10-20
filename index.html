@@ -254,8 +254,6 @@
           </div>
         </div>
 
-        <!-- TODO: create a free form at formspree.io (or web3forms.com) and paste your form ID below.
-             Until then, submitting opens the visitor's email app with the message filled in. -->
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/xppqgqgl" method="POST">
           <div class="form-row">
             <label>Name<input type="text" name="name" required autocomplete="name" /></label>
@@ -312,24 +310,28 @@
       if (navigator.clipboard) navigator.clipboard.writeText(email).then(done, done); else done();
     });
 
-    // Contact form: send via Formspree if configured, otherwise fall back to the email app
+    // Contact form — sends directly via Formspree
     var form = document.getElementById('contact-form');
     var status = document.getElementById('form-status');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var d = new FormData(form);
-      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
-        var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nRevit version: ' + d.get('revit_version') + '\n\n' + d.get('message');
-        window.location.href = 'mailto:studiofarix@gmail.com?subject=' + encodeURIComponent('Automation inquiry — Farix') + '&body=' + encodeURIComponent(body);
-        return;
-      }
       status.textContent = 'Sending…';
-      fetch(form.action, { method: 'POST', body: d, headers: { Accept: 'application/json' } })
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      })
         .then(function (r) {
-          if (r.ok) { form.reset(); status.textContent = 'Thanks! We\u2019ll reply soon.'; }
-          else status.textContent = 'Something went wrong. Please email us directly.';
+          if (r.ok) {
+            form.reset();
+            status.textContent = 'Thanks! We’ll reply soon.';
+          } else {
+            status.textContent = 'Something went wrong. Please email us directly.';
+          }
         })
-        .catch(function () { status.textContent = 'Network error. Please email us directly.'; });
+        .catch(function () {
+          status.textContent = 'Network error. Please email us directly.';
+        });
     });
   </script>
 </body>
