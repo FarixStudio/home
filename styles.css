@@ -381,11 +381,11 @@ code {
 }
 
 .product-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: var(--icon-bg);
-  border: 1px solid var(--border);
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,9 +393,10 @@ code {
 }
 
 .product-icon img {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
+  border-radius: 12px;
 }
 
 .product-tags {
