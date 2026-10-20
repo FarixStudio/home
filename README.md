@@ -4,7 +4,7 @@
 
 Farix builds custom software for AEC (architecture, engineering and construction) teams: Revit add-ins, Windows applications and focused scripts, all shaped around how your team actually works instead of forcing you to adapt to generic tools.
 
-🌐 **Live website:** https://luffyxda.github.io/Farix/
+🌐 **Live website:** [Farix Studio](https://farixstudio.github.io/home/)
 
 ## About the website
 
