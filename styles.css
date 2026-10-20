@@ -126,8 +126,89 @@ code {
 
 .nav-links a:hover { color: var(--accent-bright); }
 
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.nav-toggle:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Animate to X when open */
+.nav.is-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav.is-open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav.is-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 720px) {
-  .nav-links { display: none; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.75rem 1.25rem 1.25rem;
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-soft);
+    box-shadow: 0 12px 24px rgba(15, 40, 60, 0.08);
+  }
+
+  .nav.is-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.85rem 0.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-cta {
+    display: none; /* hide the small CTA on mobile — contact is in the menu */
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-inner {
+    position: relative;
+  }
 }
 
 /* Buttons */
